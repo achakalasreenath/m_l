@@ -8,7 +8,7 @@ import array
 
 spark_session = SparkSession.builder.appName("analysis of weather dataset for linear regression").getOrCreate()
 dataset = spark_session.read.format("csv").option("header", "true").load(
-    r'C:\Users\achakala.sreenath\Downloads\Weather.csv')
+    r'm_l/datasets/Weather.csv')
 
 def plot_data(dataset):
     plt.figure(figsize=(33,10))

@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 spark_session = SparkSession.builder.appName("data preperation for machine learning modelling").getOrCreate()
 dataset = spark_session.read.format("csv").option("header", "true").load(
-    r'C:\Users\achakala.sreenath\Downloads\szeged-weather\weatherHistory.csv')
+    r'm_l/datasets/weatherHistory.csv')
 sql_context = pyspark.sql.SQLContext(spark_session)
 
 # preprocessing
